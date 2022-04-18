@@ -1,14 +1,14 @@
 package com.techelevator;
 
 public class Item implements SoundEffect {
-
+//  parent class for the individual snack classes that implements dispense sound effect
     private String name;
     private double price;
     private String location;
     private String type;
     private String sound;
     private int quantity;
-
+// constructor that takes an array for the location, name, price, & type
     public Item(String[] array) {
         location = array[0];
         name = array[1];
@@ -25,6 +25,7 @@ public class Item implements SoundEffect {
         this.quantity = quantity;
     }
 
+//    dispense method that updates the change in quantity of product
     public void dispenseItem() {
         if (quantity >= 1) {
             quantity -= 1;

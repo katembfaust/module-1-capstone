@@ -14,16 +14,16 @@ public class ChangeDispensed {
     public ChangeDispensed() {
         currentMoney = 0.0;
     }
-
+// populates the current money with input from user
     public void feedMoney(double moneyFed) {
         this.currentMoney += moneyFed;
     }
-
+//  subtracts the price from the current money that the user has provided
     public void purchase(double price) {
         this.currentMoney -= price;
 
     }
-
+//methods that evaluate change amount by quarters, dimes, and nickels
     public int quartersToReturn(int numberOfCents) {
         while (numberOfCents >= quarter) {
             quarterQty += 1;

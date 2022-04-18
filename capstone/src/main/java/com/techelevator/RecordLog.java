@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 public class RecordLog {
 
     private File log = new File("Log.txt");
-
+    //  Java class that formats doubles into desired decimal amount for dollars and cents
     private DecimalFormat formatter = new DecimalFormat("#0.00");
 
 
@@ -21,7 +21,7 @@ public class RecordLog {
     public RecordLog() throws FileNotFoundException {
     }
 
-
+    //  Java class that pulls and formats local date & time
     public String dateTime() {
         String date = LocalDate.now().format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
         String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));

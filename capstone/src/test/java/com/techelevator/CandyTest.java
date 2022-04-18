@@ -3,7 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CandyTest {
-
+//    checks for correct dispense sound
     String[] testArray = new String[]{ "B2","Wonka", "2.00", "Candy"};
 
     Candy candy = new Candy(testArray);

@@ -13,21 +13,23 @@ public class FileSplitter {
 
 
     public void splitFile() {
-
-        String path = "C:\\Users\\lucas\\Desktop\\meritamerica\\repos\\Experiment\\module-1-capstone\\capstone\\vendingmachine.csv";
+//      grabs data directly from the vendingmachine.csv file and splits it into lines/lists
+        String path = "/Users/katelynmbfoust/Desktop/PROJECTS/module-1-capstone/capstone/vendingmachine.csv";
         File file = new File(path);
 
 
         try (Scanner fileScan = new Scanner(file)) {
-
+        // Reads the .csv file and splits it into lines
 
             while (fileScan.hasNextLine()) {
                 String line = fileScan.nextLine();
                 String[] lineSplit = splitLine(line);
+                //Creates an object of Item from the line contents
                 Item item = new Item(lineSplit);
                 String type = item.getType();
 
-                // do NOT make into a switch!!!!!!
+
+                // adding items to the itemList based on type
                 if (type.equals("Chip")) {
                     Chip chip = new Chip(lineSplit);
                     itemList.add(chip);
